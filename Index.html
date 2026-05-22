@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acertijo - Mi Amor</title>
+    <style>
+        body {
+            background-color: #f4ecdc;
+            color: #4a1c14;
+            font-family: "Georgia", serif;
+            text-align: center;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin: 0;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .heart-divider {
+            font-size: 1.5em;
+            margin: 10px 0 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .heart-divider::before, .heart-divider::after {
+            content: "";
+            height: 1px;
+            background-color: #4a1c14;
+            width: 50px;
+        }
+
+        p.instructions {
+            font-size: 1.2em;
+            margin-bottom: 40px;
+            line-height: 1.5;
+        }
+
+        .subtitle {
+            font-size: 1.1em;
+            letter-spacing: 2px;
+            margin-bottom: 25px;
+        }
+
+        .puzzle-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 25px;
+            width: 100%;
+            max-width: 800px;
+            margin-bottom: 40px;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            width: 100%;
+        }
+
+        .word-box {
+            display: flex;
+            border-left: 1px solid #4a1c14;
+            border-top: 1px solid #4a1c14;
+        }
+
+        .letter-column {
+            display: flex;
+            flex-direction: column;
+            border-right: 1px solid #4a1c14;
+            border-bottom: 1px solid #4a1c14;
+            width: 50px;
+        }
+
+        .letter-input {
+            width: 100%;
+            height: 50px;
+            border: none;
+            border-bottom: 1px solid #4a1c14;
+            background-color: transparent;
+            text-align: center;
+            font-size: 24px;
+            font-family: "Georgia", serif;
+            font-weight: bold;
+            color: #8c271e;
+            text-transform: uppercase;
+            outline: none;
+            padding: 0;
+        }
+
+        .letter-input:focus {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .number-label {
+            width: 100%;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+
+        .word-with-punctuation {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .comma {
+            font-size: 45px;
+            line-height: 45px;
+            color: #4a1c14;
+            margin-left: 5px;
+            font-family: "Georgia", serif;
+        }
+
+        .legend-container {
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px 25px;
+            max-width: 800px;
+            font-size: 1.1em;
+        }
+
+        .legend-item {
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Mi amor</h1>
+    <div class="heart-divider">♡</div>
+
+    <p class="instructions">
+        Cada letra de esta frase tiene un número.<br>
+        Descúbrelas y escribe el mensaje donde corresponde.
+    </p>
+
+    <div class="subtitle">LETRA POR LETRA:</div>
+
+    <div class="puzzle-container">
+        <div class="row">
+            <div class="word-box">
+                <div class="letter-column"><input type="text" maxlength="1" class="letter-input"><div class="number-label">5</div></div>
+                <div class="letter-column"><input type="text" maxlength="1" class="letter-input"><div class="number-label">18</div></div>
+                <div class="letter-column"><input type="text" maxlength="1" class="letter-input"><div class="number-label">5</div></div>
+                <div class="letter-column"><input type="text" maxlength="1" class="letter-input"><div class="number-label">19</div></div>
+            </div>
+            
+            <div class="word-box">
+                <div class="letter-column"><input type="text" maxlength="1" class="letter-input"><div class="number-label">21</div></div>
+                <div class="letter-column"><input type="text" maxlength="1" class="letter-input"><div class="number-label">14</div></div>
+            </div>
+
+            <div class="word-with-punctuation">
+                <div class="word-box">
+                    <div class="letter-column"><input type="text" maxlength="1" class="letter-input"><div class="number-label">16</div></div>
+                    <div class="letter-column"><input type="text" maxlength="1" class="letter-input"><div class="number-label">15</div></div>
+                    <div class="letter-column"><input type="text" maxlength="1" class="letter-input"><div class="number-label">5</div></div>
+                    <div class="letter-column"><input type="text" maxlength="1" class="letter-input"><div class="number-label">13</div></div>
+                    <div class="letter-column"><input type="text" maxlength="1" class="letter-input"><div class="number-label">1</div></div>
+                </div>
+                <div class="comma">,</div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="word-box">
+                <div class="letter-column"><input type="text" maxlength="1" class="letter-input"><div class="number-label">13</div></div>
+                <div class="letter-column"><input type="text" maxlength="1" class="letter-input"><div class="number-label">9</div></div>
+            </div>
+
+            <div class="word-box">
+                <div class="letter-column"><input type="text" maxlength="1" class="letter-input"><div class="number-label">16</div></div>
+                <div class="letter-column"><input type="text" maxlength="1" class="letter-input"><div class="number-label">15</div></div>
+                <div class="letter-column"><input type="text" maxlength="1" class="letter-input"><div class="number-label">5</div></div>
+                <div class="letter-column"><input type="text" maxlength="1" class="letter-input"><div class="number-label">13</div></div>
+                <div class="letter-column"><input type="text" maxlength="1" class="letter-input"><div class="number-label">1</div></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="legend-container">
+        <div class="legend-item">A=1</div>
+        <div class="legend-item">B=2</div>
+        <div class="legend-item">C=3</div>
+        <div class="legend-item">D=4</div>
+        <div class="legend-item">E=5</div>
+        <div class="legend-item">F=6</div>
+        <div class="legend-item">G=7</div>
+        <div class="legend-item">H=8</div>
+        <div class="legend-item">I=9</div>
+        <div class="legend-item">J=10</div>
+        <div class="legend-item">K=11</div>
+        <div class="legend-item">L=12</div>
+        <div class="legend-item">M=13</div>
+        <div class="legend-item">N=14</div>
+        <div class="legend-item">O=15</div>
+        <div class="legend-item">P=16</div>
+        <div class="legend-item">Q=17</div>
+        <div class="legend-item">R=18</div>
+        <div class="legend-item">S=19</div>
+        <div class="legend-item">T=20</div>
+        <div class="legend-item">U=21</div>
+        <div class="legend-item">V=22</div>
+        <div class="legend-item">W=23</div>
+        <div class="legend-item">X=24</div>
+        <div class="legend-item">Y=25</div>
+        <div class="legend-item">Z=26</div>
+    </div>
+
+    <script>
+        // Salto automático entre cuadros al escribir o borrar
+        const inputs = document.querySelectorAll('.letter-input');
+        inputs.forEach((input, index) => {
+            input.addEventListener('input', function() {
+                if (this.value.length === 1 && index < inputs.length - 1) {
+                    inputs[index + 1].focus();
+                }
+            });
+            
+            input.addEventListener('keydown', function(e) {
+                if (e.key === 'Backspace' && this.value === '' && index > 0) {
+                    inputs[index - 1].focus();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
